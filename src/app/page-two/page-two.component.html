@@ -1,1 +1,14 @@
-<p>page-two works!</p>
+@if(isLoading === false){
+<div class="flex justify-center items-center h-screen">
+  <mat-spinner></mat-spinner>
+</div>
+} @else if(isLoading === true){
+<div class="flex flex-col justify-center items-center h-screen">
+  <div>You are on the page-two</div>
+  <div>
+    <a [routerLink]="['/page-one']" class="text-blue-400 hover:text-blue-700"
+      ><p>Go to page one</p></a
+    >
+  </div>
+</div>
+}
